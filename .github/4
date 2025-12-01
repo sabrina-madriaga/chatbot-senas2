@@ -1,0 +1,40 @@
+const senias = {
+    "hola": {
+        img: "public/senas/hola.png",
+        descripcion: "Saludo básico.",
+        video: "https://www.youtube.com/watch?v=O0je8HZd_NU"
+    },
+    "gracias": {
+        img: "public/senas/gracias.png",
+        descripcion: "Expresión de gratitud.",
+        video: "https://www.youtube.com/watch?v=O0je8HZd_NU"
+    },
+    "familia": {
+        img: "public/senas/familia.png",
+        descripcion: "Seña para la familia.",
+        video: "https://www.youtube.com/watch?v=O0je8HZd_NU"
+    }
+    // Puedes agregar más aquí si quieres
+};
+
+function buscar() {
+    const palabra = document.getElementById("searchInput").value.toLowerCase();
+
+    if (senias[palabra]) {
+        const s = senias[palabra];
+
+        document.getElementById("resultado").innerHTML = `
+            <h2>${palabra.toUpperCase()}</h2>
+            <p>${s.descripcion}</p>
+            <img src="${s.img}">
+            <br><br>
+            <a href="${s.video}" target="_blank">
+                <button>Ver video</button>
+            </a>
+        `;
+    } else {
+        document.getElementById("resultado").innerHTML = `
+            <p>No se encontró la seña.</p>
+        `;
+    }
+}
