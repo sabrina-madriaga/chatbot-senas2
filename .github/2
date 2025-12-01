@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot de Señas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Glosario de Lengua de Señas</h1>
+
+<div class="buscador">
+    <input type="text" id="searchInput" placeholder="Escribe una palabra...">
+    <button onclick="buscar()">Buscar</button>
+</div>
+
+<div id="resultado" class="resultado"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
